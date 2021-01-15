@@ -1,0 +1,46 @@
+.enter{
+    font-size: 200pt;
+    color: #ff7b00;
+}
+
+.enter:hover{
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
+    cursor: pointer;
+}
+
+.main-content{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.content{
+    width: 80%;
+    margin: 100px auto;
+}
+
+.card-columns{
+    display: grid;
+    grid-template-columns: auto auto auto;    
+}
+
+.card{
+    width: auto !important;
+    cursor: pointer;
+}
+
+  @media screen and (max-width: 900px ) {
+    .card-columns{
+        grid-template-columns: auto auto;
+    }
+  }
+
+  @media screen and (max-width: 699px) {
+    .card-columns{
+        grid-template-columns: auto;
+    }
+  }
