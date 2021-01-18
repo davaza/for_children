@@ -1,3 +1,8 @@
+body{
+    background-image: url('../images/phone1.jpg');
+    background-size: 100%;
+}
+
 .enter{
     font-size: 200pt;
     color: #ff7b00;
@@ -25,7 +30,8 @@
 
 .card-columns{
     display: grid;
-    grid-template-columns: auto auto auto;    
+    grid-template-columns: auto auto auto;  
+    gap: 20px;  
 }
 
 .card{
@@ -55,16 +61,109 @@
 }
 
 .card{
-    background-color: blanchedalmond;
+    background-color: #d8cb2b;
+    border-radius: 25px;
+    transition: All ease 0.5s;
+}
+
+.card:hover{
+    transform: scale(1.1);
 }
 
 .card iframe{
     width: 100%;
 }
 .navbar{
-    background-color: blanchedalmond;
+    background-color: #d8cb2b;
     font-size: 26px;
     height: 70px;
     border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
+/*Начало стрелочки*/
+
+.arrow-6 {
+    margin:20px;
+}
+.arrow-6 svg {
+    width: 100px;
+    height: auto;
+    margin: 0 2rem;
+    cursor: pointer;
+    overflow: visible;
+}
+.arrow-6 svg polygon, 
+.arrow-6 svg path {
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    fill: #337AB7;
+}
+.arrow-6 svg:hover polygon, 
+.arrow-6 svg:hover path {
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+    fill: #000;
+}
+.arrow-6 svg:hover .arrow-6-pl {
+    animation: arrow-6-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.arrow-6 svg:hover .arrow-6-pl-fixed {
+    animation: arrow-6-fixed-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+ 
+@keyframes arrow-6-anim {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    5% {
+        transform: translateX(-0.1rem);
+    }
+    100% {
+        transform: translateX(1rem);
+        opacity: 0;
+    }
+}
+@keyframes arrow-6-fixed-anim {
+    5% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Конец стрелочки*/
+
+/*Начало Домик */
+.bi-house{
+    font-size: 100px;
+    line-height: 0px;
+    top: 10px;
+    position: relative;
+    color: #2b6ea7;
+    cursor: pointer;
+    /* transition: font-size ease 0.01s; */
+}
+.bi-house:hover{
+    font-size: 120px;
+    /* transform: translateX(-50%); */
+}
+
+.house-wrap{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    transition: transform ease 0s;
+}
+.house-wrap:hover{
+    transform: translateX(-10%);
+}
+/*Конеч Домик */
+
+.arrow-6{
+    position:fixed;
+    bottom: 0px;
+    right: -20px;
+}
